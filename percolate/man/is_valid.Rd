@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{is_valid}
 \alias{is_valid}
-\title{Title}
+\title{Title is_valid}
 \usage{
 is_valid(mat)
 }
@@ -13,7 +13,7 @@ is_valid(mat)
 error if matrix does not qualifies, return TRUE if pass
 }
 \description{
-Title
+Title is_valid
 }
 \examples{
 is_valid(generate_board_mat())
