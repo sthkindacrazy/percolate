@@ -7,8 +7,14 @@
 is_valid(mat)
 }
 \arguments{
-\item{mat}{}
+\item{mat}{matrix}
+}
+\value{
+error if matrix does not qualifies, return TRUE if pass
 }
 \description{
 Title
+}
+\examples{
+is_valid(generate_board_mat())
 }
