@@ -31,3 +31,9 @@ test_that("check possible errors", {
   expect_error(generate_board_mat(n = 5.4))
   expect_error(generate_board_mat(n = -5))
 })
+
+test_that("check is_valid", {
+  expect_error(is_valid(mat = c(1,2,3)))
+  expect_error(is_valid(mat = matrix(ncol = 5, nrow = 11)))
+  expect_error(is_valid(mat = matrix(1:25, nrow = 5, ncol = 5)))
+})
