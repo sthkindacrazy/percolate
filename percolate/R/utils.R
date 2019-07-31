@@ -23,3 +23,21 @@ generate_board_mat <- function(n = 5, p = 0.25) {
   gen_blocks <- sample(c(rep(0, blocked), rep(1, non_blocked)))
   return(matrix(gen_blocks, nrow = n, ncol = n))
 }
+
+#' Title
+#'
+#' @param mat matrix
+#'
+#' @return error if matrix does not qualifies, return TRUE if pass
+#' @export
+#'
+#' @examples is_valid(generate_board_mat())
+is_valid <- function(mat) {
+  # check matrix
+  assert_that(is.matrix(mat))
+  # square matrix
+  assert_that(dim(mat)[1] == dim(mat)[2])
+  # values are all 0, 1, 2
+  assert_that(sum(mat %in% c(0, 1, 2)) == dim(mat)[1]^2)
+  return(TRUE)
+}
