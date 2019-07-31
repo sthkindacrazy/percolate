@@ -14,6 +14,7 @@ library(tidyverse)
 generate_board_mat <- function(n = 5, p = 0.25) {
   assert_that(is.numeric(n))
   assert_that(is.numeric(p))
+  assert_that(n %% 1  == 0)
   assert_that(n > 0)
   assert_that(p >= 0 & p <= 1)
 
