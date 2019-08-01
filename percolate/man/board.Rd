@@ -14,8 +14,23 @@ board(mat = NULL, n = 5, p = 0.25)
 \item{p}{a number between 0 and 1 that denotes the fraction of the `n^2` squares are blocked}
 }
 \value{
-board class objects, if given matrix is incorrect, it returns errors
+board class objects, if given matrix is incorrect, it returns error
 }
 \description{
 Title board
+}
+\examples{
+board
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    0    1    1    1
+[2,]    1    0    1    1    1
+[3,]    0    1    1    1    1
+[4,]    1    0    0    1    1
+[5,]    1    1    0    1    1
+attr(,"class")
+[1] "matrix" "board"
+attr(,"n")
+[1] 5
+attr(,"p")
+[1] 0.25
 }

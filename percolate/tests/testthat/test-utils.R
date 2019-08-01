@@ -1,6 +1,3 @@
-library(assertthat)
-library(testthat)
-
 test_that("default matrix is 5 by 5 with only 0, 1, 2", {
   mat <- generate_board_mat()
   expect_equal(dim(mat)[1], 5)
