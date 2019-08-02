@@ -26,7 +26,7 @@
 #' laply(example_boards, percolate.board)
 percolate.board <- function(start_board) {
   is_valid(start_board)
-  assert_that(sum(mat %in% c(0, 1, 2)) == dim(mat)[1]^2)
+  assert_that(all(start_board %in% c(0,1,2)))
   n <- attr(start_board, "n")
   result_board <- flow(start_board)
   # percolate if one of the bottom cell is 2
