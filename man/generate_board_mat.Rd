@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{generate_board_mat}
 \alias{generate_board_mat}
-\title{Title generate_board_mat}
+\title{generate_board_mat}
 \usage{
 generate_board_mat(n = 5, p = 0.25)
 }
@@ -15,7 +15,7 @@ generate_board_mat(n = 5, p = 0.25)
 matrix with random (0, 1) (n^2 size with n^2 * p numbers of blocked(1), rest (0))
 }
 \description{
-Title generate_board_mat
+generate_board_mat
 }
 \examples{
 0 is blocked(black) 1 is non-blocked(white)
