@@ -49,7 +49,7 @@ is_valid <- function(mat) {
 read_boards <- function(file) {
   lines <- readLines(file)
   # paste with arbitrary separator ','
-  lines <- lines %>% trimws() %>% .[. != ""]  %>% paste(collapse = ",")
+  lines <- lines %>% trimws() %>% .[. != ""]  %>% paste(collapse = " ")
   boards <- extract_boards(lines)
   return(boards)
 }
@@ -66,8 +66,8 @@ read_boards <- function(file) {
 #' lines <- lines %>% trimws() %>% .[. != ""]  %>% paste(collapse = ",")
 #' extract_boards(lines)
 extract_boards <- function(lines) {
-  # ---- split with divider
-  n_board_lines <- lines %>% strsplit("----,") %>% unlist %>% .[. != ""]
+  # split with ----
+  n_board_lines <- lines %>% strsplit("----") %>% unlist() %>% .[. != ""]
   return (lapply(n_board_lines, create_board))
 }
 
@@ -80,9 +80,9 @@ extract_boards <- function(lines) {
 #'
 #' @examples
 create_board <- function(single_board_lines) {
-  single_board_lines <- single_board_lines %>% strsplit(",") %>% unlist
+  single_board_lines <- single_board_lines %>% strsplit(" ") %>% unlist() %>% .[. != ""]
   size_n <- as.numeric(single_board_lines[1])
-  board_elements <- single_board_lines[-1] %>% paste(collapse = " ") %>% strsplit(" ") %>% unlist()
+  board_elements <- single_board_lines[-1]
   if (!is_valid_board_lines(size_n, board_elements)) {
     return(NA)
   } else {
