@@ -81,13 +81,13 @@ extract_boards <- function(lines) {
 #' @examples
 create_board <- function(single_board_lines) {
   single_board_lines <- single_board_lines %>% strsplit(" ") %>% unlist() %>% .[. != ""]
-  size_n <- as.numeric(single_board_lines[1])
+  size_n <- single_board_lines[1]
   board_elements <- single_board_lines[-1]
   if (!is_valid_board_lines(size_n, board_elements)) {
     return(NA)
   } else {
     board_elements <- ifelse(board_elements == "*", 0, 1)
-    mat <- matrix(board_elements, nrow = size_n, byrow = TRUE)
+    mat <- matrix(board_elements, nrow = as.numeric(size_n), byrow = TRUE)
     return(board(mat = mat))
   }
 }
@@ -105,6 +105,8 @@ is_valid_board_lines <- function(n , board_elements) {
   if (is.na(n)) return(FALSE)
   if (is.null(n)) return(FALSE)
   if (!is.numeric(n)) return(FALSE)
+  # passed checking numeric, change it to numeric for further test
+  n <- as.numeric(n)
   if (n <= 0) return(FALSE)
   if (n %% 1 != 0) return(FALSE)
   if (n^2 != length(board_elements)) return(FALSE)
