@@ -34,3 +34,39 @@ test_that("check is_valid", {
   expect_error(is_valid(mat = matrix(ncol = 5, nrow = 11)))
   expect_error(is_valid(mat = matrix(1:25, nrow = 5, ncol = 5)))
 })
+
+test_that("check read_board function with loaded data", {
+  load(url("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolate_test.Rdata"))
+  t_boards <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test.txt")
+  expect_equal(identical(attributes(board_list), attributes(t_boards)), TRUE)
+})
+
+test_that("check read board returns NA 1", {
+  res <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test1.txt")
+  expect_equal(res, list(NA))
+})
+
+test_that("check read board returns NA 2", {
+  res <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test2.txt")
+  expect_equal(res, list(NA))
+})
+
+test_that("check read board returns NA 3", {
+  res <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test3.txt")
+  expect_equal(res, list(NA))
+})
+
+test_that("check read board returns NA 4", {
+  res <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test4.txt")
+  expect_equal(res, list(NA))
+})
+
+test_that("check read board returns NA 5", {
+  res <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test5.txt")
+  expect_equal(res, list(NA))
+})
+
+test_that("check read board returns NA 6", {
+  res <- read_boards("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolation_write_test6.txt")
+  expect_equal(res, list(NA))
+})
