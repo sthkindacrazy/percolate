@@ -1,10 +1,11 @@
-#' Title plot.board
+#' plot.board
 #'
 #' @param x matrix
 #'
 #' @return visualize the matrix with 0 = black, 1 = white, 2 = ligtblue
 #' @export
-#'
+#' @import ggplot2
+#' @import tidyr
 #' @examples run plot(board())
 plot.board <- function(x, grid = FALSE) {
   is_valid(x)

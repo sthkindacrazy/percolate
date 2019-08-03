@@ -1,4 +1,4 @@
-#' Title board
+#' board
 #'
 #' @param mat takes matrix default NULL
 #' @param n defines size of matrix when mat is NULL

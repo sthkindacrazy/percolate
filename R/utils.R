@@ -26,7 +26,7 @@ generate_board_mat <- function(n = 5, p = 0.25) {
 #'
 #' @return error if matrix does not qualifies, return TRUE if pass
 #' @export
-#'
+#' @import assertthat
 #' @examples is_valid(generate_board_mat())
 is_valid <- function(mat) {
   # check matrix
