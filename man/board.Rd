@@ -2,7 +2,7 @@
 % Please edit documentation in R/board.R
 \name{board}
 \alias{board}
-\title{Title board}
+\title{board}
 \usage{
 board(mat = NULL, n = 5, p = 0.25)
 }
@@ -17,7 +17,7 @@ board(mat = NULL, n = 5, p = 0.25)
 board class objects, if given matrix is incorrect, it returns error
 }
 \description{
-Title board
+board
 }
 \examples{
 board

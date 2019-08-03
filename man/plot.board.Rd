@@ -2,7 +2,7 @@
 % Please edit documentation in R/visualize.R
 \name{plot.board}
 \alias{plot.board}
-\title{Title plot.board}
+\title{plot.board}
 \usage{
 \method{plot}{board}(x, grid = FALSE)
 }
@@ -13,7 +13,7 @@
 visualize the matrix with 0 = black, 1 = white, 2 = ligtblue
 }
 \description{
-Title plot.board
+plot.board
 }
 \examples{
 run plot(board())
