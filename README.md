@@ -1,4 +1,4 @@
 # percolate
 implementation of logic checking percolation
 
-![sample](https://ibb.co/NVx7rSb)
+![sample](https://raw.githubusercontent.com/sthkindacrazy/percolate/master/sample.png)
