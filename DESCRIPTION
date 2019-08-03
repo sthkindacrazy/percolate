@@ -12,5 +12,7 @@ Imports:
     assertthat,
     testthat,
     ggplot2,
-    tidyr
+    tidyr,
+    gridExtra,
+    dplyr
 RoxygenNote: 6.1.1
