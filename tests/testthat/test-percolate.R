@@ -37,7 +37,6 @@ test_that("bottom row blocked", {
   expect_equal(res$result, FALSE)
 })
 
-
 test_that("percolate.board() works with all the test cases",{
   load(url("https://raw.githubusercontent.com/benjaminleroy/36-350-summer-data/master/Week5/percolate_test.Rdata"))
 
@@ -50,6 +49,5 @@ test_that("percolate.board() works with all the test cases",{
     identical(your_board, result_board) *
       (your_result_list[[x]]$result == result_list[[x]]$result)
   })
-
   expect_true(all(bool_vec))
 })
