@@ -2,7 +2,7 @@
 % Please edit documentation in R/percolate.R
 \name{percolate}
 \alias{percolate}
-\title{Title percolate}
+\title{percolate}
 \usage{
 percolate(start_board)
 }
@@ -14,7 +14,7 @@ percolate.board result (since there is no percolate for matrix,
         board inherited from matrix should call percolate instead)
 }
 \description{
-Title percolate
+percolate
 }
 \examples{
 percolate(board())

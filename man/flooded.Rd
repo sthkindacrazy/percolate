@@ -2,7 +2,7 @@
 % Please edit documentation in R/percolate.R
 \name{flooded}
 \alias{flooded}
-\title{Title flooded}
+\title{flooded}
 \usage{
 flooded(mat, nr, nc)
 }
@@ -17,7 +17,7 @@ flooded(mat, nr, nc)
 board(matrix) if cell of given row index, and column index percolates
 }
 \description{
-Title flooded
+flooded
 }
 \examples{
 flooded(board(), 1, 1)

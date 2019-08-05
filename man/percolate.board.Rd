@@ -2,7 +2,7 @@
 % Please edit documentation in R/percolate.R
 \name{percolate.board}
 \alias{percolate.board}
-\title{Title percolate.board}
+\title{percolate.board}
 \usage{
 \method{percolate}{board}(start_board)
 }
@@ -13,7 +13,7 @@
 list of result_board(after the percolate end), and result whether it is percolate or not
 }
 \description{
-Title percolate.board
+percolate.board
 }
 \examples{
 mat_example_list <- list(matrix(c(1,1,1,1,0,

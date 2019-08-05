@@ -1,4 +1,4 @@
-#' Title percolate.board
+#' percolate.board
 #'
 #' @param start_board board(matrix) of initial stage
 #'
@@ -34,7 +34,7 @@ percolate.board <- function(start_board) {
   return(list(result_board = result_board, result = result))
 }
 
-#' Title percolate
+#' percolate
 #'
 #' @param start_board
 #'
@@ -47,7 +47,7 @@ percolate <- function(start_board) {
   UseMethod("percolate")
 }
 
-#' Title flow
+#' flow
 #'
 #' @param mat takes board(matrix) and start percolate from first row
 #'
@@ -63,7 +63,7 @@ flow <- function(mat) {
   return(mat)
 }
 
-#' Title flooded
+#' flooded
 #'
 #' @param mat board(matrix)
 #' @param nr  row index

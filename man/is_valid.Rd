@@ -17,4 +17,5 @@ is_valid
 }
 \examples{
 is_valid(generate_board_mat())
+is_valid(generate_board_mat(n = 1))
 }

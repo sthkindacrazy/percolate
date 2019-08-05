@@ -2,7 +2,7 @@
 % Please edit documentation in R/percolate.R
 \name{flow}
 \alias{flow}
-\title{Title flow}
+\title{flow}
 \usage{
 flow(mat)
 }
@@ -13,7 +13,7 @@ flow(mat)
 mat (class board, matrix) after the flow ends and reflect all the flooded cell
 }
 \description{
-Title flow
+flow
 }
 \examples{
 flow(board())
